@@ -19,7 +19,7 @@ You need to have a `docker` and `docker-compose` in your machine to make this wo
 
 Once you've got your `docker` and `docker-compose` working in your machine.
 
-1. Copy your Laravel project o the `src/` folder.
+1. Copy _**all**_ _the contents_ of your Laravel project to the `src/` folder.
 2. Modify your database envrionment variables in your `.env` file with the configured mysql environment variables in the `docker-compose.yml` file.
     
     _your .env_
@@ -45,7 +45,7 @@ Once you've got your `docker` and `docker-compose` working in your machine.
 
 4. If docker finished it's process without error, you may check your laravel app in your `http://localhost:8088`
 
-### Running Composer, NPM and Artisan Commands
+### Running Composer, NPM and Artisan Commands outside of Docker
 You may run composer, NPM and artisan commands outside of docker with these commands:
 
 ```
@@ -54,10 +54,13 @@ You may run composer, NPM and artisan commands outside of docker with these comm
     docker-compose run --rm artisan <command>
 ```
 
-### NGINX Config
+### Nginx Config
 There's a file called `default.conf` inside the `nginx/` directory that is being used by the *nginx* container. You may modify this if you want to do something with the nginx conf.
+
+### Updating Docker Image Versions
+You can update the Images you want to use in the `docker-compose.yml` except for PHP which is in the `Dockerfile`.
 
 ### Acknowledgments
 
-This project is based on [Andre Schemelyun's](https://www.youtube.com/channel/UCc07-IBVwRlOsMg2WMdd8Sg) youtube [tutorial](https://www.youtube.com/watch?v=5N6gTVCG_rw). Please follow and subscribe to his channel, he has lots of great tutorials about Laravel.
+This project is based on [Andre Schemelyun's](https://www.youtube.com/channel/UCc07-IBVwRlOsMg2WMdd8Sg) youtube video [tutorial](https://www.youtube.com/watch?v=5N6gTVCG_rw). Please follow and subscribe to his channel, he has lots of great tutorials about Laravel.
 
