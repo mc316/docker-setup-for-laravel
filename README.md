@@ -19,7 +19,7 @@ You need to have a `docker` and `docker-compose` in your machine to make this wo
 
 Once you've got your `docker` and `docker-compose` working in your machine.
 
-1. Copy _**all**_ _the contents_ of your Laravel project to the `src/` folder.
+1. Copy _**all**_ _the contents_ of your Laravel project to the `src/` directory.
 2. Modify your database envrionment variables in your `.env` file with the configured mysql environment variables in the `docker-compose.yml` file.
     
     _your .env_
